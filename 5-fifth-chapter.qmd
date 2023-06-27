@@ -1,0 +1,72 @@
+# A Chapter With Some Linguistic Glosses
+
+See (\ref{ex-kor}) below.
+
+```{r}
+library(glossr)
+as_gloss(
+    "el libro que compré",
+    "the book that buy.PST.1S",
+    translation = "the book that I bought"
+    )
+```
+
+```{=latex}
+\pex[everygla=\ko] \label{ex-kor}
+Example Relative Clauses in Korean
+\a 
+\begingl
+\glpreamble \textit{First Example} //
+\gla 내가 산 책 // 
+\glb nay-ka sa-n chayk //
+\glc {\sc 1s-nom} buy-{\sc rel} book //
+\glft “the book that I bought” // 
+\endgl 
+\a 
+\begingl
+\glpreamble \textit{Second Example} //
+\gla 내가 본 영화  // 
+\glb nay-ka po-n yenghwa //
+\glc {\sc 1s-nom} watch-{\sc rel} movie //
+\glft “the movie that I watched” // 
+\endgl 
+\a 
+\begingl
+\glpreamble \textit{Third Example} //
+\gla 당신을 좋아하는 사람 // 
+\glb tangsin-ul cohaha-nun salam  //
+\glc {\sc 2s-acc} like-{\sc rel} person //
+\glft “the person who likes you” //
+\endgl 
+\xe
+```
+
+```{=latex}
+\pex[everygla=\zh]
+Example Relative Clauses in Mandarin
+\a 
+\begingl
+\glpreamble \textit{First Example} //
+\gla 我 买 的 书 // 
+\glb wo mai de shu //
+\glc {\sc 1s-nom} buy {\sc rel} book //
+\glft “the book that I bought” // 
+\endgl 
+\a 
+\begingl
+\glpreamble \textit{Second Example} //
+\gla 我 看 过 的 电影  // 
+\glb wo kan guo de dianying //
+\glc {\sc 1s} watch {\sc asp} {\sc rel} movie //
+\glft “the movie that I watched” // 
+\endgl 
+\a 
+\begingl
+\glpreamble \textit{Third Example} //
+\gla 喜欢 你 的 人 // 
+\glb xihuan ni de ren  //
+\glc like {\sc 2s} {\sc rel} person //
+\glft “the person who likes you” //
+\endgl 
+\xe
+```

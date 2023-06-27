@@ -1,0 +1,52 @@
+# A Chapter With a Syntactic Tree
+
+See (\ref{tree-break}) below.
+
+```{=latex}
+\ex \label{tree-break}
+\begin{forest}
+    for tree = {parent anchor = south, child anchor = north}
+    [NP 
+        [Det 
+            [the]
+        ] 
+        [N$'$ 
+            [N 
+                [boy]
+            ] 
+            [CP 
+                [NP 
+                    [N 
+                        [who, name = target]
+                    ] 
+                ]
+                [C$'$ 
+                    [C 
+                        [+Rel]
+                    ] 
+                    [TP 
+                        [NP 
+                            [\textit{t}, name = source]
+                        ] 
+                        [T$'$ 
+                            [T 
+                                [+PST]
+                            ]
+                            [VP 
+                                [V 
+                                    [broke]
+                                ] 
+                                [NP 
+                                    [the window, roof ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ]
+    \draw[->] (source) to [out=south, in=south] (target);
+\end{forest}
+\xe
+```

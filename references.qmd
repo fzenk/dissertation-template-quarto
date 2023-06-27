@@ -1,0 +1,6 @@
+\onehalfspacing
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

@@ -1,0 +1,146 @@
+% page setup
+\usepackage[letterpaper, margin=1in, footskip=0.5in]{geometry}
+\special{papersize=8.5in,11in}
+
+% fonts
+\usepackage{fontspec}
+\usepackage{setspace}
+\newfontfamily\ko{Dotum}
+\newfontfamily\zh{DengXian}
+\newfontfamily\sy{Segoe UI Symbol}
+\raggedright
+
+% linguistic examples
+\usepackage{expex}
+\lingset{
+  glhangstyle=none, 
+  aboveglftskip=0pt, 
+  everygla={},
+  Everyex=\singlespace
+  }
+\usepackage{etoolbox}
+\pretocmd{\chapter}{\excnt=1}{}{}
+
+% syntactic trees
+\usepackage{xytree}
+\usepackage{textcomp}
+\usepackage[linguistics]{forest}
+
+% indentation
+\usepackage{indentfirst}
+\setlength{\parindent}{0.5in}
+
+% captions
+\usepackage[captionskip=0pt]{floatrow}
+\floatsetup[figure]{capposition=top}
+\floatsetup[table]{capposition=top}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
+\usepackage[singlelinecheck=false, labelfont=bf, labelsep=newline, textfont=it, justification=raggedright, skip=0pt]{caption}
+
+% enable 
+\usepackage{graphicx}
+\setlength\tabcolsep{3pt} % cell padding
+
+% misc
+\usepackage{multicol}
+\usepackage{pdfpages}
+\usepackage{contour}
+%\usepackage{showframe} % show page margins
+
+% reformat chapter headings
+\makeatletter
+\def\@makechapterhead#1{
+  {\parindent \z@ \centering \normalfont \singlespacing
+    \ifnum \c@secnumdepth >\m@ne
+        \normalsize \bfseries \MakeUppercase \@chapapp\space \MakeUppercase{\thechapter}
+        \par\nobreak
+        \vskip 5\p@
+    \fi
+    \interlinepenalty\@M
+    \normalsize \bfseries \MakeUppercase{#1}\par\nobreak
+    \vskip 10\p@
+  }}
+\def\@makeschapterhead#1{
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    \normalsize \bfseries \MakeUppercase{#1}\par\nobreak
+    \vskip 10\p@
+  }}
+\makeatother
+
+% reformat section headings
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0pt}{0.5\baselineskip}{0.2\baselineskip}{\normalfont\normalsize\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}{0.5\baselineskip}{0.2\baselineskip}{\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0pt}{0.5\baselineskip}{0.2\baselineskip}{\normalfont\normalsize\bfseries}}
+\makeatother
+
+% reformat table of contents, list of tables, and list of figures
+\usepackage{titletoc}
+\usepackage{tocloft}
+\setlength{\cftbeforetoctitleskip}{0.8in}
+\renewcommand{\cfttoctitlefont}{\normalfont\MakeUppercase\raggedright}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
+\titlecontents{part}
+[0pt] % left margin
+{\addvspace{1em}\bfseries\normalsize} % above code
+{\MakeUppercase\partname~\thecontentslabel\hspace{1em}} % numbered entry format
+{} % unnumbered entry format
+{} % filler-page-format, e.g., dots
+[\addvspace{0em}] % below code
+\renewcommand{\cftfigfont}{\raggedright}
+\renewcommand{\cfttabfont}{\raggedright}
+\cftsetindents{figure}{0em}{2.5em}
+\cftsetindents{table}{0em}{2.5em}
+
+% include part titles in the toc but hide them in the body
+\renewcommand{\part}[1]{\addcontentsline{toc}{part}{#1}}
+
+% define commands for adding colored boxes around text
+\usepackage{tikz}
+\newcommand{\add}[2][]{%
+  \begin{tikzpicture}[baseline = (text.base)]%
+    \node[%
+      inner sep = 2pt,
+      text depth = depth("Cap") + 1pt,
+      text height = height("Cap") + 1pt,
+      fill=green!20!white,
+      draw=green!80!black,
+      solid,
+      line width=0.6pt,
+      sharp corners,
+  #1] (text) {#2};
+  \end{tikzpicture}%
+}%
+\newcommand{\remove}[2][]{%
+  \begin{tikzpicture}[baseline = (text.base)]%
+    \node[%
+      inner sep = 2pt,
+      text depth = depth("Cap") + 1pt,
+      text height = height("Cap") + 1pt,
+      fill=red!20!white,
+      draw=red,
+      dashed,
+      line width=0.6pt,
+      sharp corners,
+  #1] (text) {#2};
+  \end{tikzpicture}%
+}%
+\newcommand{\gap}[2][]{%
+  \begin{tikzpicture}[baseline = (text.base)]%
+    \node[%
+      inner sep = 2pt,
+      text depth = depth("Cap") + 1pt,
+      text height = height("Cap") + 1pt,
+      draw=black,
+      solid,
+      text width=5em,
+      align = center,
+      line width=0.6pt,
+      sharp corners,
+  #1] (text) {#2};
+  \end{tikzpicture}%
+}%

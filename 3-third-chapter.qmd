@@ -1,0 +1,10 @@
+# A Chapter With a Figure
+
+See @fig-example below.
+
+:::: {#fig-example}
+![](image/example.png)
+\raggedright\textit{Note}. Figure Note.
+
+Example Figure
+::::

@@ -1,0 +1,15 @@
+# A Chapter With a Table
+
+See @tbl-example below.
+
+:::: {#tbl-example}
+```{r}
+library(tidyverse)
+library(kableExtra)
+kbl(head(iris), booktabs = TRUE) %>%
+  kable_classic(full_width = T)
+```
+\flushleft\textit{Note}. Table note.
+
+Example Table
+::::

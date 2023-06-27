@@ -1,0 +1,3 @@
+# A Chapter With Some Citations
+
+This is a sentence with a parenthetical citation [@smit54; see also @gree00; @jame76]. This is a sentence with a text citation of Phillips [-@phil99].

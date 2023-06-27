@@ -1,0 +1,45 @@
+project:
+  type: book
+
+book:
+  title: ""
+  chapters:
+    - index.qmd
+    - abbreviations.qmd
+    - part: "Chapters"
+      chapters: 
+        - 1-first-chapter.qmd
+        - 2-second-chapter.qmd
+        - 3-third-chapter.qmd
+        - 4-fourth-chapter.qmd
+        - 5-fifth-chapter.qmd
+        - 6-sixth-chapter.qmd
+  appendices: 
+    - appendices.qmd
+    - references.qmd
+
+bibliography: references.bib
+csl: apa.csl
+
+format:
+  pdf:
+    documentclass: report
+    fig-pos: "H"
+include-before-body: front.qmd
+toc-title: "\\vspace{-3cm} \\begin{center} \\normalsize \\textbf{TABLE OF CONTENTS} \\end{center} \\vspace{-1.5cm}"
+crossref: 
+  lot-title: ""
+  lof-title: ""
+link-citations: true
+linkcolor: black
+mainfont: Times New Roman
+sansfont: Times New Roman
+fontsize: 12pt
+linestretch: 1.5
+indent: true
+number-sections: true
+toc: true
+execute: 
+  echo: false
+  warning: false
+include-in-header: style.sty

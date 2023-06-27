@@ -1,0 +1,86 @@
+\pagenumbering{gobble}
+
+\begin{centering}
+
+\vspace{3cm}
+
+\doublespacing
+DISSERTATION TITLE
+
+\vspace{1.5cm}
+
+\singlespacing
+A DISSERTATION SUBMITTED TO THE GRADUATE DIVISION OF \\
+UNIVERSITY NAME IN PARTIAL FULFILLMENT OF \\
+THE REQUIREMENTS FOR THE DEGREE OF
+
+\vspace{1cm}
+
+\doublespacing
+DOCTOR OF PHILOSOPHY \\
+IN \\
+DEPARTMENT NAME
+
+\vspace{1.5cm}
+
+\singlespacing
+SEPTEMBER 2023
+
+\vspace{1.5cm}
+
+\doublespacing
+By \\
+Author Name
+
+\vspace{1.5 cm}
+
+\singlespacing
+Dissertation Committee: \\
+First Person, Chairperson \\
+Second Person \\
+Third Person \\
+Fourth Person \\
+Fifth Person
+
+\vspace*{\fill}
+
+\flushleft
+Keywords: first keyword, second keyword, third keyword
+
+\end{centering}
+
+\newpage
+
+\pagenumbering{roman}
+
+\setcounter{page}{1}
+
+\vspace*{\fill}
+
+\begin{centering}
+
+Copyright \textcopyright \space 2023
+
+\vspace{0.5 cm}
+
+Author Name
+
+All Rights Reserved
+
+\end{centering}
+
+\newpage
+
+\begin{spacing}{1.5}
+
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+
+\newpage
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\end{spacing}
+
+\newpage
