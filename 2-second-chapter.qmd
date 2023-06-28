@@ -11,5 +11,5 @@ kbl(head(iris), booktabs = TRUE) %>%
 ```
 \flushleft\textit{Note}. Table note.
 
-Example Table
+Example Table with an supercalafragilistic supercalafragilistic supercalafragilistic supercalafragilistic supercalafragilistic supercalafragilistic supercalafragilistic long title.
 ::::

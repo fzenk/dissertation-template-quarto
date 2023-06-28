@@ -6,5 +6,5 @@ See @fig-example below.
 ![](image/example.png)
 \raggedright\textit{Note}. Figure Note.
 
-Example Figure
+Example Figure with an supercalafragilistic supercalafragilistic supercalafragilistic supercalafragilistic supercalafragilistic supercalafragilistic supercalafragilistic long title.
 ::::
